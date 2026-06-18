@@ -110,6 +110,25 @@ Since the value is less than **0.5**, the model predicts:
 Malignant
 ```
 
+## Trained Model
+
+The repository includes a pre-trained Keras model:
+
+- `breast_cancer_model.keras`
+
+## Loading the Model
+
+```python
+from tensorflow import keras
+import joblib
+
+# Load the trained neural network
+model = keras.models.load_model("breast_cancer_model.keras")
+
+# Load the scaler used during training
+scaler = joblib.load("scaler.pkl")
+```
+
 ---
 
 ## Key Concepts Learned
